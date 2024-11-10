@@ -1,0 +1,303 @@
+* {
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    text-decoration: none !important;
+    list-style: none ;
+    font-family: 'Lato', sans-serif ;
+}
+:root {
+    --First-Color : #f9f9f9 ;
+    --Second-Color : #000000 ;
+    --Third-Color : #fff ;
+    --Fourth-Color : #ffa500 ;
+}
+html {
+    scroll-behavior : smooth ;
+}
+.main-title {
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.main-title span {
+    color:var(--Fourth-Color);
+}
+/* Start Nav */
+#navbar {
+    background:var(--First-Color) ;
+}
+#navbar #logo {
+    color:var(--Second-Color) ;
+    font-weight: 700 ;
+    font-size: 36px ;
+    margin-bottom:5px ;
+    text-shadow: 0px 1px 1px var(--Second-Color) ;
+}
+#navbar #logo span ,
+#navbar .navbar-toggler span {
+    color:var(--Fourth-Color) ;
+}
+.navbar-nav {
+    margin-left:20px ;
+}
+.nav-item .nav-link {
+    color:var(--Second-Color) ;
+    font-weight: 550 ;
+    letter-spacing:1px ;
+    border-radius:3px ;
+    transition: .3s ease ;
+    text-align: center;
+}
+.nav-item .nav-link:hover {
+    color: var(--Third-Color) ;
+    background:var(--Fourth-Color) ;
+}
+@media (width < 992px) {
+    nav .container > div ul > :last-child {
+        margin-bottom:10px ;
+    }
+}
+#navbar form button {
+    background:orange ;
+    border:none ;
+}
+/* End Nav */
+/* Start Home */
+.home {
+    background:url(imgs/Travel-Website/background\ img.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 87.8vh;
+}
+.home::after {
+    content:"";
+    position: absolute;
+    top:0;
+    width: 100%;
+    height:100%;
+    background:rgb(0, 0, 0 , .5);
+}
+.home h5 , 
+.home h1 {
+    font-weight: 550;
+} 
+.home h5 ,
+.home h1 ,
+.home p {
+    color: var(--Third-Color) ;
+}
+.home h5 ,
+.home h1 ,
+.home p ,
+.home .change-content::after ,
+.container .main-title {
+    text-shadow: 0px 1px 1px var(--Second-Color);
+}
+.home h5 {
+    font-size: 38px ;
+}
+.home h1 {
+    font-size: 70px;
+}
+.home p {
+    font-size: 15px;
+    font-weight: 600;
+}
+.home a {
+    color:var(--Third-Color) ;
+    border:1px solid var(--Third-Color) ;
+    letter-spacing: 2px;
+    transition-duration: .5s;
+    font-weight: 550;
+
+}
+.home a:hover {
+    color:var(--Fourth-Color) ;
+    border:1px solid var(--Fourth-Color) ;
+}
+.home .content {
+    z-index: 1;
+}
+.home .change-content::after {
+    content:"Germany";
+    position: relative;
+    animation:10s change-content infinite ; 
+    color:var(--Fourth-Color);
+}
+@keyframes change-content {
+    10% {
+        content:"China";
+    }
+    20% {
+        content:"France";
+    }
+    30% {
+        content:"Spain";
+    }
+    40% {
+        content:"India";
+    }
+    50% {
+        content:"Italy";
+    }
+    60% {
+        content:"Turkey";
+    }
+    70% {
+        content:"Mexico";
+    }
+    80% {
+        content:"Pakistan"
+    }
+    90% {
+        content:"Egypt"
+    }
+    100% {
+        content:"Germany";
+    }
+}
+@media (width < 600px) {
+    .home h5 {
+        font-size: 30px;
+    }
+    .home h1 {
+        font-size: 45px;
+    }
+}
+/* End Home */
+/* Start Book */
+.book {
+    height:100vh ;
+    background:var(--First-Color) ;
+}
+.book .row > :first-child div {
+    background:var(--Third-Color) ;
+    border-radius: 6px;
+    border:.5px solid rgb(215, 206, 206);
+}
+.book .row > :first-child div ,
+.book input ,
+.book textarea {
+    box-shadow: 0px 5px 5px -6px var(--Second-Color);
+    padding:10px;
+    border-radius: 10px;
+}
+.book input {
+    outline: none;
+    border: none;
+}
+.book input[type="submit"] {
+    color:var(--Third-Color) ;
+    background:var(--Fourth-Color) ;
+    width:fit-content;
+    transition: .5s;
+}
+.book input[type="submit"]:hover {
+    padding-right:60px !important ;
+    padding-left:60px !important ;
+}
+.book input :focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25)
+}
+@media (width < 768px) {
+    .book .row {
+        flex-direction: column;
+    }
+    .book .box {
+        margin-bottom:24px;
+    }
+    .book input[type="submit"] {
+        margin:auto;
+    }
+    .book {
+        height:fit-content ;
+    }
+}
+/* End Book */
+/* Start Packages */
+.packages a {
+    background : var(--Fourth-Color) !important;
+    border:none ; 
+}
+.packages .card{
+    box-shadow: 0px 5px 7px -6px var(--Second-Color) ;
+}
+.packages .stars :first-child , 
+.packages .stars :nth-child(2) ,
+.packages .stars :nth-child(3) {
+    color:var(--Fourth-Color)
+}
+/* End Packages */
+/* Start Services */
+.services {
+    background:var(--First-Color);
+}
+.services .card {
+box-shadow: rgba(0,0,0,0.1) 0px 4px 12px ;
+border:none;
+}
+.services .card i {
+    font-size: 80px;
+    color:var(--Fourth-Color);
+}
+.services .card h5 {
+    font-weight: 600;
+}
+/* End Services */
+/* Start Gallary */
+.gallary img {
+    transition: 1s;
+}
+.gallary .card {
+    overflow: hidden;
+}
+.gallary .card:hover img {
+    transform: rotate(10deg) scale(1.5) ;
+}
+/* End Gallary */
+/* Start About Us */
+.about {
+    background: var(--First-Color);
+}
+.about h2 {
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.about a {
+    color:white;
+    background:var(--Fourth-Color) ;
+    width:fit-content ;
+    letter-spacing:2px;
+    font-weight: 700;
+    transition: .5s;
+}
+.about a:hover {
+    padding-left:30px !important;
+    padding-right:30px !important;
+    color:white;
+    background:var(--Fourth-Color);
+}
+/* End About Us */
+/* Start Footer */
+footer .social-media i {
+    color:var(--Third-Color);
+    background:var(--Second-Color);
+    transition: .5s;
+}
+footer .social-media > i:not(:last-child) {
+    margin-right:10px;
+}
+footer .social-media i:hover {
+    background: var(--Fourth-Color);
+    color:var(--Third-Color);
+}
+footer a {
+    color:var(--Fourth-Color) ;
+}
+/* End Footer */
